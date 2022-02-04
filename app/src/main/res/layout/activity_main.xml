@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:id="@+id/nav_host_fragment"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/main_nav"/>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"><androidx.viewpager.widget.ViewPager
+    android:id="@+id/view_pager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_above="@id/txt_skip"/>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:layout_width="40dp"
+        android:layout_height="8dp"
+        app:tabBackground="@drawable/tab_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.3"
+        android:id="@+id/txt_skip"
+        android:text="Skip"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="70dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/txt_skip"
+        android:layout_alignParentRight="true"
+        android:id="@+id/txt_next"
+        android:text="Next"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="70dp"
+
+        /></RelativeLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>
